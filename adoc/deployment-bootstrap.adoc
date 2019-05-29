@@ -1,5 +1,9 @@
 == Bootstrapping the cluster
 
+Bootstrapping the cluster is the initial process of starting up the cluster
+and defining which of the nodes are masters and which workers. For maximum automation of this process
+{productname} uses the caaspctl package.
+
 === Preparation
 
 ==== Install caaspctl
@@ -20,7 +24,8 @@ sudo zypper in caaspctl
 
 === Cluster Deployment
 
-Make sure you have added the SSH identity (corresponding to the SSH key distributed above) to the ssh-agent on your workstation. This is a requirement for caaspctl (https://github.com/SUSE/caaspctl#prerequisites).
+Make sure you have added the SSH identity (corresponding to the SSH key distributed above) to the ssh-agent on your workstation.
+This is a requirement for caaspctl (https://github.com/SUSE/caaspctl#prerequisites).
 
 [TIP]
 ====
@@ -60,7 +65,8 @@ Replace `<NODE NAME>` with a unique identifier for example "master-one".
 +
 [WARNING]
 ====
-The directory created during this step contains configuration files that allow full administrator access to your cluster. Apply best practices for access control to this folder.
+The directory created during this step contains configuration files that allow full administrator access to your cluster.
+Apply best practices for access control to this folder.
 ====
 +
 ----
